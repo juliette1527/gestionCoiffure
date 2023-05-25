@@ -31,10 +31,10 @@ public class Reservation implements Serializable{
 	private List<Prestation> prestations = new ArrayList<>();
 
 	@OneToMany(mappedBy = "reservationSalon", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
-	private List<Prestation> salons = new ArrayList<>();
+	private List<Salon> salons = new ArrayList<>();
 	
 	@ManyToOne
-	private Utilisateur utilisateur;
+	private Utilisateur utilisateurReservation;
 	
 	public Reservation() {
 		super();
@@ -44,7 +44,7 @@ public class Reservation implements Serializable{
 	public Reservation(Date date, Utilisateur utilisateur) {
 		super();
 		this.date = date;
-		this.utilisateur = utilisateur;
+		this.utilisateurReservation = utilisateur;
 	}
 
 	public Long getIdReservation() {
@@ -67,25 +67,25 @@ public class Reservation implements Serializable{
 		this.prestations = prestations;
 	}
 
-	public List<Prestation> getSalons() {
+	public List<Salon> getSalons() {
 		return salons;
 	}
 
-	public void setSalons(List<Prestation> salons) {
+	public void setSalons(List<Salon> salons) {
 		this.salons = salons;
 	}
 
 	public Utilisateur getUtilisateur() {
-		return utilisateur;
+		return utilisateurReservation;
 	}
 
 	public void setUtilisateur(Utilisateur utilisateur) {
-		this.utilisateur = utilisateur;
+		this.utilisateurReservation = utilisateur;
 	}
 
 	@Override
 	public String toString() {
-		return "Reservation [idReservation=" + idReservation + ", date=" + date + ", utilisateur=" + utilisateur + "]";
+		return "Reservation [idReservation=" + idReservation + ", date=" + date + ", utilisateur=" + utilisateurReservation + "]";
 	}
 
 

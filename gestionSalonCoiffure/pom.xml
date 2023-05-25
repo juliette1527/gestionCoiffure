@@ -11,13 +11,10 @@
 	</parent>
 	<groupId>com.inti</groupId>
 
-	<artifactId>gestion_salon_coiffure</artifactId>
+	<artifactId>gestionSalonCoiffure</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
   <name>gestionSalonCoiffure</name>
 
-	<artifactId>gestion_salon_coiffure</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>gestionSalonCoiffure</name>
 
 	<description>Demo project for Spring Boot</description>
 	<properties>
