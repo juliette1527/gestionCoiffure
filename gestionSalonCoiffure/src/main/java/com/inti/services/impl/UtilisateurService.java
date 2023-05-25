@@ -34,9 +34,6 @@ public class UtilisateurService implements IUtilisateurService {
 		utilisateurRepository.deleteById(id);
 	}
 
-	@Override
-	public Utilisateur findByUsername(String username) {
-		return utilisateurRepository.findByUsername(username);
-	}
+
 
 }
