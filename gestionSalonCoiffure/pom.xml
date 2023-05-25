@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.inti</groupId>
-	<artifactId>gestionUtilisateur</artifactId>
+	<artifactId>gestion_salon_coiffure</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>gestionUtilisateur</name>
 	<description>Demo project for Spring Boot</description>

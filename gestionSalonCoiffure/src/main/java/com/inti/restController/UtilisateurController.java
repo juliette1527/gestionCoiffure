@@ -53,7 +53,9 @@ public class UtilisateurController {
 		Utilisateur currentUtilisateur = utilisateurService.findOne(id);
 		currentUtilisateur.setNomUtilisateur(utilisateur.getNomUtilisateur());
 		currentUtilisateur.setPrenomUtilisateur(utilisateur.getPrenomUtilisateur());
-		currentUtilisateur.setRoles(utilisateur.getRoles());
+		currentUtilisateur.setLogin(utilisateur.getLogin());
+		currentUtilisateur.setPassword(utilisateur.getPassword());
+		currentUtilisateur.setDateNaissance(utilisateur.getDateNaissance());
 		return utilisateurService.save(currentUtilisateur);
 	}
 
