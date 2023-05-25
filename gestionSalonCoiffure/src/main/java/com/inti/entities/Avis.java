@@ -21,7 +21,7 @@ public class Avis implements Serializable {
 	private String description; 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="idUtilisateur")
-	private Utilisateur utilisateur;
+	private Utilisateur utilisateurAvis;
 	public Avis() {
 	
 	}
@@ -32,7 +32,7 @@ public class Avis implements Serializable {
 	public Avis(String titre, String description, Utilisateur utilisateur) {
 		this.titre = titre;
 		this.description = description;
-		this.utilisateur = utilisateur;
+		this.utilisateurAvis = utilisateur;
 	}
 	public long getIdAvis() {
 		return idAvis;
@@ -53,15 +53,15 @@ public class Avis implements Serializable {
 		this.description = description;
 	}
 	public Utilisateur getUtilisateur() {
-		return utilisateur;
+		return utilisateurAvis;
 	}
 	public void setUtilisateur(Utilisateur utilisateur) {
-		this.utilisateur = utilisateur;
+		this.utilisateurAvis = utilisateur;
 	}
 	@Override
 	public String toString() {
 		return "Avis [idAvis=" + idAvis + ", titre=" + titre + ", description=" + description + ", utilisateur="
-				+ utilisateur + "]";
+				+ utilisateurAvis + "]";
 	}
 	
 	

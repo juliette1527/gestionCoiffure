@@ -11,7 +11,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import org.apache.tomcat.jni.Address;
 
 @Entity
 @Table(name ="SALONS", schema ="gestion_salon_coiffure")
@@ -20,7 +19,7 @@ public class Salon implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idSalon;
 	private String nameSalon;
-	private Address adress;
+	private String adress;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="reservationSalon_id")
@@ -31,7 +30,7 @@ public class Salon implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Salon(String nameSalon, Address adress, Reservation reservationSalon) {
+	public Salon(String nameSalon, String adress, Reservation reservationSalon) {
 		super();
 		this.nameSalon = nameSalon;
 		this.adress = adress;
@@ -50,10 +49,10 @@ public class Salon implements Serializable {
 	public void setNameSalon(String nameSalon) {
 		this.nameSalon = nameSalon;
 	}
-	public Address getAdress() {
+	public String getAdress() {
 		return adress;
 	}
-	public void setAdress(Address adress) {
+	public void setAdress(String adress) {
 		this.adress = adress;
 	}
 	public Reservation getReservationSalon() {

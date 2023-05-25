@@ -36,9 +36,9 @@ public class Utilisateur implements Serializable {
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "PROFILS", joinColumns = @JoinColumn(name = "id_user", referencedColumnName = "idUtilisateur"), inverseJoinColumns = @JoinColumn(name = "id_role", referencedColumnName = "idRole"))
 	private Set<Role> roles = new HashSet<>();
-	@OneToMany(mappedBy = "utilisateur")
+	@OneToMany(mappedBy = "utilisateurAvis")
 	private List<Avis> avis = new ArrayList<>();
-	@OneToMany(mappedBy="utilisateur")
+	@OneToMany(mappedBy="utilisateurReservation")
 	private List<Reservation> reservation= new ArrayList<>();
 	
 	public Utilisateur() {
