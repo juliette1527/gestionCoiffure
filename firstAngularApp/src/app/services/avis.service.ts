@@ -1,13 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Utilisateur } from '../models/utilisateur';
-
+import { Avis } from '../models/avis.model';
 @Injectable({
   providedIn: 'root'
 })
-export class UtilisateurService {
-  private BASE_URL = "http://localhost:9090/utilisateurs";
+export class AvisService {
+  private BASE_URL = "http://localhost:9090/avis";
   // HttpClient: un module qui nous permet d'utiliser les verbes http : GET.POST,PUT et DELETE
   constructor(private httpClient:HttpClient) { }
   // findAll --> verbe http GET --> url : BASE_URL --> Récupération des données avec la méthode Observable
@@ -16,11 +15,11 @@ export class UtilisateurService {
     return this.httpClient.get(this.BASE_URL); 
   }
   // save --> verbe http POST --> url : BASE_URL + Body (utilisateur)
-  public save(utilisateur:Utilisateur):Observable<any>{
-    return this.httpClient.post(this.BASE_URL,utilisateur);
+  public save(avis:Avis):Observable<any>{
+    return this.httpClient.post(this.BASE_URL,avis);
   }
   // delete --> verbe http DELETE --> url : BASE_URL/id
-  // http://localhost:9090/utilisateurs/5
+  // http://localhost:9090/avis/5
   public delete(id:number):Observable<any>{
     return this.httpClient.delete(this.BASE_URL+"/"+id);
   }
