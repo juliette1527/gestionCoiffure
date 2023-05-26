@@ -10,13 +10,15 @@ import { MyDirectiveDirective } from './directives/my-directive.directive';
 import { SqrtPipe } from './pipes/sqrt.pipe';
 import { UtilisateurService } from './services/utilisateur.service';
 import {HttpClientModule} from '@angular/common/http';
+import { ReservationComponent } from './reservation/reservation.component';
 @NgModule({
   declarations: [
     AppComponent,
     UtilisateurComponent,
     RoleComponent,
     MyDirectiveDirective,
-    SqrtPipe
+    SqrtPipe,
+    ReservationComponent
   ],
   imports: [
     BrowserModule,
