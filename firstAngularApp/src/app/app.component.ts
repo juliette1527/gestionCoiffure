@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
   providers: []
 })
 export class AppComponent {
+title(title: any) {
+  throw new Error('Method not implemented.');
+}
 // Interpolation : du fichier ts ( oussama  = 'Bonjour') -> html ({{oussama}})  
 oussama = 'Bonjour ';
 personne = "Oussama AYARI";
