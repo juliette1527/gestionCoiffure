@@ -10,8 +10,10 @@ import { MyDirectiveDirective } from './directives/my-directive.directive';
 import { SqrtPipe } from './pipes/sqrt.pipe';
 import { UtilisateurService } from './services/utilisateur.service';
 import {HttpClientModule} from '@angular/common/http';
+import { ReservationComponent } from './reservation/reservation.component';
 import { AvisComponent } from './avis/avis.component';
 import { AvisService } from './services/avis.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,9 @@ import { AvisService } from './services/avis.service';
     RoleComponent,
     MyDirectiveDirective,
     SqrtPipe,
+    ReservationComponent
     AvisComponent
+
   ],
   imports: [
     BrowserModule,
