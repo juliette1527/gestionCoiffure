@@ -21,7 +21,7 @@ import { AvisService } from './services/avis.service';
     RoleComponent,
     MyDirectiveDirective,
     SqrtPipe,
-    ReservationComponent
+    ReservationComponent,
     AvisComponent
 
   ],
