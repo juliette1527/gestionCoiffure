@@ -1,22 +1,4 @@
-<!--Spring MVC-->
-<!--
-<div>
-    <table>
-        <tr>
-            <td>Nom</td>
-            <td>Prénom</td>
-            <td>Statut</td>
-        </tr>
-        <c:foreach var="u" items="${listUtilisateur}"></c:foreach>
-        <tr>
-            <td>${u.nom}</td>
-            <td>${u.prenom}</td>
-            <td>${u.statut}</td>    
-        </tr>
-        </c:foreach>
-    </table>
-</div>
--->
+
 <!--Angular-->
 <div>
     <h1>Ajouter un utilisateur</h1>
@@ -39,6 +21,10 @@
                 <td><input type="text" [(ngModel)]="user.password" name="password"/></td>
             </tr>
             <tr>
+                <td>Date de naissance</td>
+                <td><input type="text" [(ngModel)]="user.dateNaissance" name="dateNaissance"/></td>
+            </tr>
+            <tr>
                 <td colspan="2"><button>Ajouter</button></td>
             </tr>
         </table>
@@ -51,13 +37,15 @@
             <td>Prénom</td>
             <td>Username</td>
             <td>Password</td>
+            <td>Date de naissance</td>
             <td>Action</td>
         </tr>
         <tr *ngFor="let u of users">
             <td>{{u.nomUtilisateur}}</td>
             <td>{{u.prenomUtilisateur}}</td>
-            <td>{{u.username}}</td>
+            <td>{{u.login}}</td>
             <td>{{u.password}}</td>
+            <td>{{u.dateNaissance}}</td>
             <td><button (click)="deleteUtilisateur(u.idUtilisateur)">Delete</button></td>
         </tr>
     </table>

@@ -6,5 +6,6 @@ export class Utilisateur {
     prenomUtilisateur!:string;
     username!:string;
     password!:string;
+    dateNaissance!:string;
     roles!:Role[];
 }
